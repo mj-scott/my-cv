@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Melissa J. Scott · Ethnomusicologist</title>
+  <meta name="description" content="Melissa J. Scott is a Lecturer in Ethnomusicology at the University of Central Florida, working on music, displacement, and humanitarianism in Jordan, and on AI and Arab music.">
+  <meta name="theme-color" content="#0f1b2d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f1b2d'/%3E%3Cpath d='M4 16h3l2-7 3 14 3-18 3 20 3-13 2 4h5' fill='none' stroke='%23e0a53a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top" aria-label="Melissa J. Scott, back to top">
+      <svg viewBox="0 0 32 16" width="28" height="14" aria-hidden="true"><path d="M1 8h3l2-6 3 12 3-14 3 16 3-10 2 2h9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>M. J. Scott</span>
+    </a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#map">Talks</a></li>
+        <li><a href="#path">Path</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#more">More</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <canvas id="wave" aria-hidden="true"></canvas>
+      <div class="wrap hero__inner">
+        <p class="eyebrow">Ethnomusicologist · Lecturer, University of Central Florida</p>
+        <h1>Melissa J. <span>Scott</span></h1>
+        <p class="lede">I study how music is heard, governed, and carried across borders: from the call to prayer and humanitarian music programs in Jordan to what happens when AI tries to play the oud.</p>
+        <ul class="badges" aria-label="Highlights">
+          <li>Fulbright U.S. Scholar to Jordan, 2027</li>
+          <li>Charles Seeger Prize, 2022</li>
+          <li>Ph.D., UC Berkeley, 2023</li>
+        </ul>
+        <p class="hero__hint" aria-hidden="true">Press play on your curiosity ↓</p>
+      </div>
+    </section>
+
+    <section id="research" class="wrap">
+      <h2><span class="kicker">Listening to…</span>Research</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>The Aurality of Displacement</h3>
+          <p>My book manuscript asks how humanitarianism and migration are <em>heard</em> in Jordan: in music programs, soundscapes, and the politics of what counts as “aid.”</p>
+          <p class="tags"><span>Humanitarianism</span><span>Migration</span><span>Jordan</span></p>
+        </article>
+        <article class="card">
+          <h3>A Troubled Unison</h3>
+          <p>Jordan’s “Unified” Call to Prayer and the sonic materiality of difference in Amman, now in <em>Ethnomusicology</em> 70(2), 2026.</p>
+          <p class="tags"><span>Sound studies</span><span>Islam</span><span>Amman</span></p>
+        </article>
+        <article class="card">
+          <h3>AI &amp; Arab Music</h3>
+          <p>With Fadi Al-Ghawanmeh: OudGen, mawwal accompaniment, and teaching generative AI in the music classroom. Member of the University of Jordan research group on AI in Arabic music.</p>
+          <p class="tags"><span>Generative AI</span><span>Oud</span><span>Pedagogy</span></p>
+        </article>
+      </div>
+      <div class="langs">
+        <h3 class="small">Languages</h3>
+        <ul id="languages"></ul>
+      </div>
+    </section>
+
+    <section id="map" class="wrap">
+      <h2><span class="kicker">Heard around the world</span>Talks &amp; conferences</h2>
+      <p class="sub">Pick a pin to see what I presented there. Filter by year to watch the map fill in.</p>
+      <div class="map-controls">
+        <label for="yearRange">Show talks since <output id="yearOut">2011</output></label>
+        <input type="range" id="yearRange" min="2011" max="2025" step="1" value="2011">
+      </div>
+      <div class="map-layout">
+        <figure class="map" id="mapFigure">
+          <svg id="worldMap" viewBox="0 0 960 480" role="img" aria-label="World map with pins for talk locations"></svg>
+          <figcaption class="visually-hidden">Interactive map. The same content is listed in full below the map.</figcaption>
+        </figure>
+        <aside class="map-panel" id="mapPanel" aria-live="polite">
+          <h3 id="panelTitle">Choose a pin</h3>
+          <ul id="panelList"></ul>
+        </aside>
+      </div>
+      <details class="allTalks">
+        <summary>See every talk as a list</summary>
+        <div id="talkList"></div>
+      </details>
+    </section>
+
+    <section id="path" class="wrap">
+      <h2><span class="kicker">The score so far</span>Path</h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <section id="publications" class="wrap">
+      <h2><span class="kicker">On the record</span>Publications</h2>
+      <div class="cols">
+        <div>
+          <h3 class="small">Published</h3>
+          <ul class="entries" id="pubArticles"></ul>
+          <h3 class="small">Other publications &amp; media</h3>
+          <ul class="entries" id="pubMedia"></ul>
+        </div>
+        <div>
+          <h3 class="small">In progress</h3>
+          <ul class="entries entries--progress" id="pubProgress"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching" class="wrap">
+      <h2><span class="kicker">In the classroom</span>Teaching</h2>
+      <div id="teachingList" class="accordion"></div>
+    </section>
+
+    <section id="more" class="wrap">
+      <h2><span class="kicker">And also</span>Honors, grants, service &amp; music-making</h2>
+      <div class="cols cols--3">
+        <div>
+          <h3 class="small">Honors &amp; awards</h3>
+          <ul class="entries" id="honors"></ul>
+          <h3 class="small">Memberships</h3>
+          <ul class="plain" id="memberships"></ul>
+        </div>
+        <div>
+          <h3 class="small">Grants</h3>
+          <ul class="entries" id="grants"></ul>
+        </div>
+        <div>
+          <h3 class="small">Ensembles (oud)</h3>
+          <ul class="entries" id="ensembles"></ul>
+          <h3 class="small">Service</h3>
+          <ul class="plain" id="service"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <svg class="footer__wave" viewBox="0 0 400 20" preserveAspectRatio="none" aria-hidden="true"><path d="M0 10h60l5-8 6 16 6-18 6 20 6-14 5 4h306" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <p>Melissa J. Scott · Lecturer in Ethnomusicology · School of Performing Arts, University of Central Florida</p>
+      <p class="fine">Content adapted from my CV (July 2026).</p>
+    </div>
+  </footer>
+
+  <noscript><p class="wrap noscript">This page builds its lists with JavaScript. Please enable it to see the full CV.</p></noscript>
+  <script src="data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
